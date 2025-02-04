@@ -301,7 +301,7 @@ const cards = [
     
     title: "HabitUP - Chrome Extension",
     description: "Html, CSS, JS",
-    src: "/assets/HabitUp.jpeg",
+    src: "/assets/HabitUp.png",
     ctaText: "Github",
     ctaLink: "https://github.com/musaddiq-rafi/HabitUp",
     content: () => {
