@@ -4,6 +4,7 @@ import { RecentProjects } from '@/components/RecentProjects'
 import InfoGrid from '@/components/InfoGrid'
 import React from 'react'
 import { Dock } from '@/components/Dock'
+import { ContactMe } from '@/components/ContactMe'
 
 const page = () => {
   return (
@@ -15,6 +16,7 @@ const page = () => {
       <Hero />
       <InfoGrid />
       <RecentProjects />
+      <ContactMe />
       <Footer />
     </div>
     </main>

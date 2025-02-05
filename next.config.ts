@@ -8,7 +8,9 @@ const nextConfig: NextConfig = {
         hostname: '**',
       },
     ],
-    
+    domains: [
+      "api.microlink.io", // Microlink Image Preview
+    ],
   }
   /* config options here */
 };
