@@ -5,11 +5,13 @@ import InfoGrid from '@/components/InfoGrid'
 import React from 'react'
 import { Dock } from '@/components/Dock'
 import { ContactMe } from '@/components/ContactMe'
+import { Analytics } from "@vercel/analytics/react"
 
 const page = () => {
   return (
     <main className="dark bg-black font-extrabold" >
     <div className="dark">
+      <Analytics/>
 
       {/* <p className='text-4xl text-red-600'> THE WEBSITE IS UNER CONSTRUCTION PLEASE VISIT LATER</p> */}
       <Dock />
