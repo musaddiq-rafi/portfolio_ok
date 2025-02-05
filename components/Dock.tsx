@@ -3,13 +3,14 @@ import React from "react";
 import { FloatingDock } from "@/components/ui/floating-dock";
 import {
   IconBrandGithub,
-  IconBrandX,
-  IconExchange,
+  IconBrandLinkedin,
+  IconSend,
   IconHome,
-  IconNewSection,
   IconTerminal2,
+  IconLayout,
+  IconBrandFacebook,
 } from "@tabler/icons-react";
-import Image from "next/image";
+
 
 export function Dock() {
   const links = [
@@ -20,54 +21,53 @@ export function Dock() {
       ),
       href: "#",
     },
-
     {
-      title: "Products",
+      title: "About",
+      icon: (
+        <IconLayout className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+      ),
+      href: "#about",
+    },
+    {
+      title: "Projects",
       icon: (
         <IconTerminal2 className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
-      href: "#",
+      href: "#projects",
     },
     {
-      title: "Components",
+      title: "Contact Me",
       icon: (
-        <IconNewSection className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+        <IconSend className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
-      href: "#",
+      href: "#contact",
     },
     {
-      title: "Aceternity UI",
+      title: "LinkedIn",
       icon: (
-        <Image
-          src="https://assets.aceternity.com/logo-dark.png"
-          width={20}
-          height={20}
-          alt="Aceternity Logo"
-        />
+        <IconBrandLinkedin className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
-      href: "#",
-    },
-    {
-      title: "Changelog",
-      icon: (
-        <IconExchange className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-      ),
-      href: "#",
-    },
-
-    {
-      title: "Twitter",
-      icon: (
-        <IconBrandX className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-      ),
-      href: "#",
+      href: "https://www.linkedin.com/in/musaddiq-rafi/",
+      target: "_blank",
+      rel: "noopener noreferrer",
     },
     {
       title: "GitHub",
       icon: (
         <IconBrandGithub className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
-      href: "#",
+      href: "https://github.com/musaddiq-rafi/",
+      target: "_blank",
+      rel: "noopener noreferrer",
+    },
+    {
+      title: "Facebook",
+      icon: (
+        <IconBrandFacebook className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+      ),
+      href: "https://facebook.com/abdullahalmusaddiq.rafi",
+      target: "_blank",
+      rel: "noopener noreferrer",
     },
   ];
   return (

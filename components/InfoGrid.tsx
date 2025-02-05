@@ -13,9 +13,9 @@ import { motion } from "framer-motion";
 export function InfoGrid() {
   const features = [
     {
-      title: "Next Generation of Web Development",
+      title: "I love awesome techs!",
       description:
-        "No more boring webpages. Make them come alive.",
+        "AI , Machine Learning, Web Development - I love them all.",
       skeleton: <SkeletonOne />,
       className:
         "col-span-1 lg:col-span-4 border-b lg:border-r dark:border-neutral-800",
@@ -44,6 +44,7 @@ export function InfoGrid() {
     },
   ];
   return (
+    <section id="about">
     <div className="relative z-20 py-10 lg:py-40 max-w-7xl mx-auto">
       <div className="px-8">
         <h4 className="text-3xl lg:text-5xl lg:leading-tight max-w-5xl mx-auto text-center tracking-tight font-bold text-black dark:text-white">
@@ -67,6 +68,7 @@ export function InfoGrid() {
         </div>
       </div>
     </div>
+    </section>
   );
 }
 

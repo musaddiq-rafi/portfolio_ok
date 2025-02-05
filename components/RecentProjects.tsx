@@ -31,7 +31,7 @@ export function RecentProjects() {
   useOutsideClick(ref, () => setActive(null));
 
   return (
-    <>
+    <section id="projects">
     <h1 className="text-3xl md:text-5xl text-white py-10 px-4 md:px-60 font-bold text-center mt-10">
       Some of my Recent <span className="text-purple-300">Projects</span>
     </h1>
@@ -168,7 +168,7 @@ export function RecentProjects() {
           </motion.div>
         ))}
       </ul>
-    </>
+    </section>
   );
 }
 
@@ -234,7 +234,7 @@ const cards = [
     description: "React, TailwindCSS",
     src: "/assets/Nike.png",
     ctaText: "Github",
-    ctaLink: "https://ui.aceternity.com/templates",
+    ctaLink: "https://github.com/musaddiq-rafi/shoe-landingPage",
     content: () => {
       return (
         <p>
