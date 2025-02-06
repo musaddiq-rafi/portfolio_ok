@@ -1,4 +1,4 @@
-# Portfolio Minimal
+# Musaddiq Rafi's Digital Garden v01
 
 This is a portfolio website built using Next.js, Framer Motion, TailwindCSS, TypeScript, and Aceterity UI. It showcases my recent projects, skills, and experience in web development.
 
