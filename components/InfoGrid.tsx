@@ -5,6 +5,7 @@ import Image from "next/image";
 import createGlobe from "cobe";
 import { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
+import { AnimatedLine } from "./ui/animated-line";
 
 
 
@@ -46,10 +47,12 @@ export function InfoGrid() {
   return (
     <section id="about">
     <div className="relative z-20 py-10 lg:py-24 max-w-7xl mx-auto">
-      <div className="px-8">
-        <h4 className="text-3xl lg:text-5xl lg:leading-tight max-w-5xl mx-auto text-center tracking-tight font-bold text-black dark:text-white">
-           Who am I? 
-        </h4>
+      <div className="px-8 flex flex-col items-center">
+        <AnimatedLine>
+          <h4 className="text-3xl lg:text-5xl lg:leading-tight text-center tracking-tight font-bold text-black dark:text-white">
+             Who am I? 
+          </h4>
+        </AnimatedLine>
 
         <p className="text-sm lg:text-base  max-w-2xl  my-4 mx-auto text-neutral-500 text-center font-normal dark:text-neutral-300">
           I&apos;m a passionate developer with a knack for creating innovative solutions and a love for continuous learning.

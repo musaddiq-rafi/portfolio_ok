@@ -1,11 +1,14 @@
 "use client";
 import React from 'react'
+import { AnimatedLine } from "./ui/animated-line";
 
 const ContactMe = () => {
     return (
         <section id='contact'>
         <div className="py-10 flex flex-col items-center justify-center text-white">
-            <h2 className='text-4xl py-4'>Contact <span className='text-purple-400'>Me</span> </h2>
+            <AnimatedLine>
+                <h2 className='text-4xl py-4'>Contact <span className='text-purple-400'>Me</span> </h2>
+            </AnimatedLine>
             <p> Any question, suggestion or just want to say Hi - mail me!   </p>
             <div className=" py-10 bg-black flex justify-center items-center">
                 <div className="relative inline-flex group">

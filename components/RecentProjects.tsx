@@ -3,6 +3,7 @@ import Image from "next/image";
 import React, { useEffect, useId, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useOutsideClick } from "../hooks/useOutsideClick";
+import { AnimatedLine } from "./ui/animated-line";
 
 export function RecentProjects() {
   const [active, setActive] = useState<(typeof cards)[number] | boolean | null>(
@@ -32,9 +33,13 @@ export function RecentProjects() {
 
   return (
     <section id="projects">
-    <h1 className="text-3xl md:text-5xl text-white py-10 px-4 md:px-60 font-bold text-center mt-10">
-      Some of my Recent <span className="text-purple-300">Projects</span>
-    </h1>
+    <div className="flex justify-center">
+      <AnimatedLine>
+        <h1 className="text-3xl md:text-5xl text-white py-10 px-4 font-bold text-center mt-10">
+          Some of my Recent <span className="text-purple-300">Projects</span>
+        </h1>
+      </AnimatedLine>
+    </div>
       <AnimatePresence>
         {active && typeof active === "object" && (
           <motion.div
