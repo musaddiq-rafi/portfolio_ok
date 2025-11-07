@@ -7,7 +7,6 @@ import { Dock } from '@/components/Dock'
 import  ContactMe  from '@/components/ContactMe'
 import { Analytics } from "@vercel/analytics/react"
 import { SpeedInsights } from "@vercel/speed-insights/next"
-import { Timeline } from '@/components/ui/timeline'
 import { TimelineDemo } from '@/components/TimelineEducation'
 const page = () => {
   return (
