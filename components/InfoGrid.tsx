@@ -23,7 +23,7 @@ export function InfoGrid() {
     {
       title: "My tech stack",
       description:
-        "Next.js, React, TailwindCSS, and more. I'm always learning new things.",
+        "Next.js, SQL, TailwindCSS, and more. I'm always learning new things.",
       skeleton: <SkeletonTwo />,
       className: "border-b col-span-1 lg:col-span-2 dark:border-neutral-800",
     },
@@ -45,7 +45,7 @@ export function InfoGrid() {
   ];
   return (
     <section id="about">
-    <div className="relative z-20 py-10 lg:py-40 max-w-7xl mx-auto">
+    <div className="relative z-20 py-10 lg:py-24 max-w-7xl mx-auto">
       <div className="px-8">
         <h4 className="text-3xl lg:text-5xl lg:leading-tight max-w-5xl mx-auto text-center tracking-tight font-bold text-black dark:text-white">
            Who am I? 
@@ -57,7 +57,7 @@ export function InfoGrid() {
       </div>
 
       <div className="relative ">
-        <div className="grid grid-cols-1 lg:grid-cols-6 mt-12 xl:border rounded-md dark:border-neutral-800">
+        <div className="grid grid-cols-1 lg:grid-cols-6 mt-8 gap-y-6 xl:border rounded-md dark:border-neutral-800">
           {features.map((feature) => (
             <FeatureCard key={feature.title} className={feature.className}>
               <FeatureTitle>{feature.title}</FeatureTitle>
@@ -132,7 +132,7 @@ export const SkeletonOne = () => {
 export const SkeletonThree = () => {
   return (
 
-      <div className="w-full mx-auto bg-transparent dark:bg-transparent group h-96">
+      <div className="w-full mx-auto bg-transparent dark:bg-transparent group h-64">
         <div className="flex flex-1 w-full h-full flex-col space-y-2 relative">
           <Image
         src="https://images.unsplash.com/photo-1626908013351-800ddd734b8a?q=80&w=2786&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
