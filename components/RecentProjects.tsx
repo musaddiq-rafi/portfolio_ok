@@ -40,6 +40,7 @@ export function RecentProjects() {
         </h1>
       </AnimatedLine>
     </div>
+    <p className="text-center text-white font-bold text-sm pb-4">THESE ARE OLDER PROJECTS. UPDATED PROJECTS WILL BE ADDED SHORTLY</p>
       <AnimatePresence>
         {active && typeof active === "object" && (
           <motion.div

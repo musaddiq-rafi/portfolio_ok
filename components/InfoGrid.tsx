@@ -46,7 +46,7 @@ export function InfoGrid() {
               Software Engineer passionate about{' '}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 dark:from-indigo-400 dark:via-purple-400 dark:to-pink-400">building impactful technology</span>
             </h2>
-            <p className="text-neutral-600 dark:text-neutral-300 text-base md:text-lg leading-relaxed">
+            <p className="text-neutral-600 font-medium dark:text-neutral-300 text-base md:text-lg leading-relaxed">
               I&apos;m a Software Engineering student at IUT specializing in full-stack web development 
               and AI/ML systems. I build things from first principles — from kernel-level buddy 
               allocators in C to production Next.js applications. I&apos;m comfortable across the full 

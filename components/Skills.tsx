@@ -57,61 +57,56 @@ export function Skills() {
         </div>
 
         <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
-          <div className="relative flex items-center justify-center w-64 h-64 lg:w-80 lg:h-80 flex-shrink-0">
-            {/* Gradient background ring */}
+          <div className="relative flex items-center justify-center w-64 h-64 lg:w-80 lg:h-80 flex-shrink-0 [perspective:600px] [transform-style:preserve-3d]">
             <div className="absolute inset-0 rounded-full bg-gradient-to-r from-indigo-500 via-purple-500 via-pink-500 to-cyan-500 opacity-10 blur-xl" />
             
-            {/* Orbit 1 - inner */}
             <motion.div
               className="absolute rounded-full border border-purple-400/30"
               animate={{ rotate: 360 }}
               transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
-              style={{ width: 120, height: 120 }}
+              style={{ width: 120, height: 120, transformStyle: "preserve-3d" }}
             >
-              <div className="absolute w-8 h-8 -top-4 left-[calc(50%-16px)] rounded-full bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 shadow-sm shadow-purple-500/20 flex items-center justify-center">
+              <div className="absolute w-8 h-8 -top-4 left-1/2 -translate-x-1/2 rounded-full bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 shadow-[0_0_15px_rgba(168,85,247,0.6)] flex items-center justify-center [transform:translateZ(20px)]">
                 <Code2 size={14} className="text-white" />
               </div>
-              <div className="absolute w-8 h-8 -bottom-4 left-[calc(50%-16px)] rounded-full bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 shadow-sm shadow-purple-500/20 flex items-center justify-center">
+              <div className="absolute w-8 h-8 -bottom-4 left-1/2 -translate-x-1/2 rounded-full bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 shadow-[0_0_15px_rgba(168,85,247,0.6)] flex items-center justify-center [transform:translateZ(-20px)]">
                 <Brain size={14} className="text-white" />
               </div>
             </motion.div>
 
-            {/* Orbit 2 - middle */}
             <motion.div
               className="absolute rounded-full border border-pink-400/30"
               animate={{ rotate: -360 }}
               transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
-              style={{ width: 190, height: 190 }}
+              style={{ width: 190, height: 190, transformStyle: "preserve-3d" }}
             >
-              <div className="absolute w-7 h-7 -top-3.5 left-[calc(50%-14px)] rounded-full bg-gradient-to-br from-purple-500 via-pink-500 to-cyan-500 shadow-sm shadow-pink-500/20 flex items-center justify-center">
+              <div className="absolute w-7 h-7 -top-3.5 left-1/2 -translate-x-1/2 rounded-full bg-gradient-to-br from-purple-500 via-pink-500 to-cyan-500 shadow-[0_0_15px_rgba(236,72,153,0.6)] flex items-center justify-center [transform:translateZ(30px)]">
                 <Server size={12} className="text-white" />
               </div>
-              <div className="absolute w-7 h-7 -bottom-3.5 left-[calc(50%-14px)] rounded-full bg-gradient-to-br from-purple-500 via-pink-500 to-cyan-500 shadow-sm shadow-pink-500/20 flex items-center justify-center">
+              <div className="absolute w-7 h-7 -bottom-3.5 left-1/2 -translate-x-1/2 rounded-full bg-gradient-to-br from-purple-500 via-pink-500 to-cyan-500 shadow-[0_0_15px_rgba(236,72,153,0.6)] flex items-center justify-center [transform:translateZ(-30px)]">
                 <Database size={12} className="text-white" />
               </div>
             </motion.div>
 
-            {/* Orbit 3 - outer */}
             <motion.div
               className="absolute rounded-full border border-cyan-400/30"
               animate={{ rotate: 360 }}
               transition={{ duration: 35, repeat: Infinity, ease: "linear" }}
-              style={{ width: 260, height: 260 }}
+              style={{ width: 260, height: 260, transformStyle: "preserve-3d" }}
             >
-              <div className="absolute w-6 h-6 -top-3 left-[calc(50%-12px)] rounded-full bg-gradient-to-br from-pink-500 to-cyan-500 shadow-sm shadow-cyan-500/20 flex items-center justify-center">
+              <div className="absolute w-6 h-6 -top-3 left-1/2 -translate-x-1/2 rounded-full bg-gradient-to-br from-pink-500 to-cyan-500 shadow-[0_0_15px_rgba(6,182,212,0.6)] flex items-center justify-center [transform:translateZ(40px)]">
                 <Terminal size={10} className="text-white" />
               </div>
-              <div className="absolute w-6 h-6 -bottom-3 left-[calc(50%-12px)] rounded-full bg-gradient-to-br from-pink-500 to-cyan-500 shadow-sm shadow-cyan-500/20 flex items-center justify-center">
+              <div className="absolute w-6 h-6 -bottom-3 left-1/2 -translate-x-1/2 rounded-full bg-gradient-to-br from-pink-500 to-cyan-500 shadow-[0_0_15px_rgba(6,182,212,0.6)] flex items-center justify-center [transform:translateZ(-40px)]">
                 <GitBranch size={10} className="text-white" />
               </div>
             </motion.div>
 
-            {/* Center badge */}
             <motion.div
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
               transition={{ delay: 0.5, type: "spring" }}
-              className="absolute z-20 w-16 h-16 rounded-full bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 flex items-center justify-center shadow-sm shadow-purple-500/20 border-2 border-white dark:border-neutral-900"
+              className="absolute z-20 w-16 h-16 rounded-full bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 flex items-center justify-center shadow-[0_0_25px_rgba(168,85,247,0.7)] border-2 border-white dark:border-neutral-900"
             >
               <span className="text-white font-bold text-[10px]">SKILLS</span>
             </motion.div>
