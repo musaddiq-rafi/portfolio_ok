@@ -8,6 +8,7 @@ import  ContactMe  from '@/components/ContactMe'
 import { Analytics } from "@vercel/analytics/react"
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { TimelineDemo } from '@/components/TimelineEducation'
+import { Skills } from '@/components/Skills'
 const page = () => {
   return (
     <main className="dark bg-black font-extrabold font-sans" >
@@ -20,6 +21,7 @@ const page = () => {
       <Hero />
       <InfoGrid />
       <TimelineDemo/>
+      <Skills />
       <RecentProjects />
       <ContactMe />
       <Footer />
