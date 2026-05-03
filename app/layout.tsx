@@ -15,8 +15,62 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Musaddiq Rafi's Portfolio",
-  description: "Abdullah Al Musaddiq Rafi's personal website",
+  metadataBase: new URL("https://musaddiqrafi.vercel.app"),
+  title: {
+    default: "Abdullah Al Musaddiq Rafi | Portfolio",
+    template: "%s | Abdullah Al Musaddiq Rafi",
+  },
+  description: "Abdullah Al Musaddiq Rafi - Full Stack Developer, Web Developer, and Software Engineer. View projects, skills, and experience.",
+  keywords: [
+    "Abdullah Al Musaddiq Rafi",
+    "Musaddiq Rafi",
+    "portfolio",
+    "full stack developer",
+    "web developer",
+    "software engineer",
+    "Next.js",
+    "React",
+  ],
+  authors: [{ name: "Abdullah Al Musaddiq Rafi" }],
+  creator: "Abdullah Al Musaddiq Rafi",
+  publisher: "Abdullah Al Musaddiq Rafi",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://musaddiqrafi.vercel.app",
+    siteName: "Abdullah Al Musaddiq Rafi Portfolio",
+    title: "Abdullah Al Musaddiq Rafi | Portfolio",
+    description: "Full Stack Developer - View projects, skills, and experience.",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Abdullah Al Musaddiq Rafi Portfolio",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Abdullah Al Musaddiq Rafi | Portfolio",
+    description: "Full Stack Developer - View projects, skills, and experience.",
+    creator: "@musaddiqrafi",
+    images: ["/og-image.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  alternates: {
+    canonical: "https://musaddiqrafi.vercel.app",
+  },
 };
 
 export default function RootLayout({
@@ -26,6 +80,25 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: "Abdullah Al Musaddiq Rafi",
+              url: "https://musaddiqrafi.vercel.app",
+              jobTitle: "Full Stack Developer",
+              description: "Full Stack Developer, Web Developer, and Software Engineer",
+              sameAs: [
+                "https://github.com/musaddiqrafi",
+                "https://linkedin.com/in/musaddiqrafi",
+              ],
+            }),
+          }}
+        />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased cursor-none`}
       >
