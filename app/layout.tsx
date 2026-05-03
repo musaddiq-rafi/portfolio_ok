@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://musaddiqrafi.vercel.app"),
+  metadataBase: new URL("https://musaddiq-rafi.vercel.app"),
   title: {
     default: "Abdullah Al Musaddiq Rafi | Portfolio",
     template: "%s | Abdullah Al Musaddiq Rafi",
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://musaddiqrafi.vercel.app",
+    url: "https://musaddiq-rafi.vercel.app",
     siteName: "Abdullah Al Musaddiq Rafi Portfolio",
     title: "Abdullah Al Musaddiq Rafi | Portfolio",
     description: "Full Stack Developer - View projects, skills, and experience.",
@@ -69,7 +69,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "https://musaddiqrafi.vercel.app",
+    canonical: "https://musaddiq-rafi.vercel.app",
   },
 };
 
@@ -89,7 +89,7 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "Person",
               name: "Abdullah Al Musaddiq Rafi",
-              url: "https://musaddiqrafi.vercel.app",
+              url: "https://musaddiq-rafi.vercel.app",
               jobTitle: "Full Stack Developer",
               description: "Full Stack Developer, Web Developer, and Software Engineer",
               sameAs: [
