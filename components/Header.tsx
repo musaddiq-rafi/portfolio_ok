@@ -63,7 +63,7 @@ export function Header() {
       </motion.div>
 
       {/* Hero content */}
-      <div className="absolute bottom-0 left-0 z-10 px-6 md:px-10 lg:px-14 pb-14 md:pb-18 lg:pb-22 max-w-4xl">
+      <div className="absolute bottom-0 left-0 z-10 px-6 md:px-10 lg:px-14 pb-14 md:pb-20 lg:pb-24 max-w-4xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}

@@ -8,6 +8,7 @@ import {
   useSpring,
   useTransform,
 } from "framer-motion";
+import { X, Menu } from "lucide-react";
 import Link from "next/link";
 import { useRef, useState } from "react";
 
@@ -73,23 +74,9 @@ const FloatingDockMobile = ({
         className="h-10 w-10 rounded-full bg-[var(--bg-elevated)] border border-[var(--border)] flex items-center justify-center"
       >
         {open ? (
-          <svg className="h-5 w-5 text-[var(--text-muted)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M6 18L18 6M6 6l12 12" />
-          </svg>
+          <X className="h-5 w-5 text-[var(--text-muted)]" />
         ) : (
-          <svg
-            className="h-5 w-5 text-[var(--text-muted)]"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={1.5}
-              d="M4 6h16M4 12h16M4 18h16"
-            />
-          </svg>
+          <Menu className="h-5 w-5 text-[var(--text-muted)]" />
         )}
       </button>
     </div>

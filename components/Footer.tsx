@@ -1,6 +1,7 @@
 "use client";
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
+import { ArrowUpRight, Mail, MapPin } from "lucide-react";
 
 const navLinks = [
   { name: "Home", href: "#" },
@@ -80,9 +81,7 @@ export function Footer() {
               <span className="text-[10px] md:text-xs uppercase tracking-[0.12em] font-medium text-[var(--text-muted)] group-hover:text-[var(--accent)] transition-colors duration-300">
                 {link.name}
               </span>
-              <span className="text-[var(--text-muted)] group-hover:text-[var(--accent)] group-hover:rotate-45 transition-all duration-300 text-sm">
-                ↗
-              </span>
+              <ArrowUpRight className="w-3 h-3 text-[var(--text-muted)] group-hover:text-[var(--accent)] group-hover:rotate-45 transition-all duration-300" />
             </a>
           ))}
         </motion.div>
@@ -134,9 +133,7 @@ export function Footer() {
                 className="flex-1 bg-transparent border border-[var(--border)] px-3 py-2 text-[11px] text-[var(--text)] placeholder:text-[var(--text-muted)] focus:outline-none focus:border-[var(--accent)] transition-colors duration-300"
               />
               <button className="w-9 h-9 border border-[var(--border)] flex items-center justify-center text-[var(--text-muted)] hover:text-[var(--accent)] hover:border-[var(--accent)] transition-all duration-300 flex-shrink-0">
-                <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5" />
-                </svg>
+                <Mail className="w-3.5 h-3.5" />
               </button>
             </div>
           </div>
@@ -144,10 +141,7 @@ export function Footer() {
           {/* Contact Info */}
           <div className="bg-[var(--card-bg)] px-5 py-4 flex flex-col justify-center">
             <div className="flex items-center gap-2 mb-2">
-              <svg className="w-3.5 h-3.5 text-[var(--text-muted)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
-              </svg>
+              <MapPin className="w-3.5 h-3.5 text-[var(--text-muted)]" />
               <span className="text-[10px] uppercase tracking-[0.12em] font-medium text-[var(--text-muted)]">
                 Location
               </span>

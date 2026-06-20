@@ -1,6 +1,7 @@
 "use client";
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
+import { ArrowRight } from "lucide-react";
 
 export function Contact() {
   const ref = useRef<HTMLDivElement>(null);
@@ -82,7 +83,7 @@ export function Contact() {
 
             <div className="space-y-6">
               <div>
-                <h3 className="text-[9px] uppercase tracking-[0.3em] font-medium text-[var(--text-muted)] mb-2">
+                <h3 className="text-[10px] uppercase tracking-[0.3em] font-medium text-[var(--text-muted)] mb-2">
                   Email
                 </h3>
                 <a
@@ -94,7 +95,7 @@ export function Contact() {
               </div>
 
               <div>
-                <h3 className="text-[9px] uppercase tracking-[0.3em] font-medium text-[var(--text-muted)] mb-2">
+                <h3 className="text-[10px] uppercase tracking-[0.3em] font-medium text-[var(--text-muted)] mb-2">
                   Phone
                 </h3>
                 <a
@@ -106,7 +107,7 @@ export function Contact() {
               </div>
 
               <div>
-                <h3 className="text-[9px] uppercase tracking-[0.3em] font-medium text-[var(--text-muted)] mb-3">
+                <h3 className="text-[10px] uppercase tracking-[0.3em] font-medium text-[var(--text-muted)] mb-3">
                   Social
                 </h3>
                 <div className="flex gap-6">
@@ -188,9 +189,7 @@ export function Contact() {
                 ) : (
                   <>
                     <span>Send Message</span>
-                    <span className="text-base group-hover:translate-x-1 transition-transform duration-300">
-                      →
-                    </span>
+                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
                   </>
                 )}
               </motion.button>

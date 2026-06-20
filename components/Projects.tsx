@@ -1,6 +1,7 @@
 "use client";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import { ArrowUpRight } from "lucide-react";
 
 const projects = [
   {
@@ -132,7 +133,7 @@ export function Projects() {
                       rel="noopener noreferrer"
                       className="text-[10px] uppercase tracking-[0.15em] font-medium text-[var(--text-muted)] hover:text-[var(--accent)] transition-colors duration-300 flex items-center gap-1 flex-shrink-0 mt-2"
                     >
-                      GitHub <span>↗</span>
+                      GitHub <ArrowUpRight className="w-3 h-3 inline" />
                     </a>
                   </div>
 

@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { ThemeToggle } from "./ThemeToggle";
+import { ArrowUpRight } from "lucide-react";
 
 const navLinks = [
   { name: "About", href: "#about" },
@@ -53,7 +54,7 @@ export function Navbar() {
               className="flex items-center gap-2 px-5 border-l border-[var(--border)] text-[10px] uppercase tracking-[0.15em] font-medium text-[var(--text-muted)] hover:text-[var(--accent)] hover:bg-[var(--bg-elevated)] transition-all duration-300"
             >
               {link.name}
-              <span className="text-[var(--text-muted)]/40">↗</span>
+              <ArrowUpRight className="w-3 h-3 text-[var(--text-muted)]/40" />
             </a>
           ))}
           <div className="border-l border-[var(--border)]">
