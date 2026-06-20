@@ -1,152 +1,110 @@
 "use client";
-import React from "react";
-import { motion } from "framer-motion";
-import { 
-  Code2, 
-  Database, 
-  Server, 
-  Brain, 
-  Terminal, 
-  GitBranch,
-} from "lucide-react";
-import { AnimatedLine } from "./ui/animated-line";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 
-const skillGroups = [
+const skillCategories = [
   {
     title: "Languages",
-    icon: Code2,
-    skills: ["JavaScript", "TypeScript", "Python", "C", "Java"],
+    skills: ["JavaScript", "TypeScript", "Python", "C", "Java", "Go"],
   },
   {
     title: "Frontend",
-    icon: Terminal,
     skills: ["Next.js", "React", "Tailwind CSS", "Shadcn/UI"],
   },
   {
     title: "Backend",
-    icon: Server,
     skills: ["Express.js", "Node.js", "Spring Boot", "FastAPI"],
   },
   {
     title: "AI / ML",
-    icon: Brain,
-    skills: ["PyTorch", "LSTM", "Transformers", "OpenAI API", "Gemini API"],
+    skills: ["PyTorch", "LSTM", "Transformers", "OpenAI API", "Claude API"],
   },
   {
     title: "Databases",
-    icon: Database,
     skills: ["PostgreSQL", "MongoDB", "MySQL", "Oracle 19c", "Redis"],
   },
   {
-    title: "DevOps",
-    icon: GitBranch,
+    title: "DevOps & Infra",
     skills: ["Docker", "Nginx", "Git", "Linux"],
   },
 ];
 
 export function Skills() {
+  const ref = useRef<HTMLDivElement>(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { staggerChildren: 0.08 },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] as const },
+    },
+  };
+
   return (
-    <section className="py-16 lg:py-24 bg-white dark:bg-black">
-      <div className="max-w-7xl mx-auto px-6 md:px-12">
-        <div className="text-center mb-12">
-          <AnimatedLine>
-            <h4 className="text-3xl md:text-4xl lg:text-5xl font-bold text-neutral-900 dark:text-white">
-              Skills
-            </h4>
-          </AnimatedLine>
+    <section
+      ref={ref}
+      id="skills"
+      className="relative px-6 md:px-10 lg:px-14 py-32"
+    >
+      <motion.div
+        variants={containerVariants}
+        initial="hidden"
+        animate={isInView ? "visible" : "hidden"}
+        className="max-w-6xl mx-auto"
+      >
+        <motion.div variants={itemVariants} className="flex items-center gap-4 mb-6">
+          <span className="w-6 h-px bg-[var(--accent)]" />
+          <span className="text-[10px] uppercase tracking-[0.3em] font-medium text-[var(--accent)]">
+            Skills
+          </span>
+        </motion.div>
+
+        <motion.h2
+          variants={itemVariants}
+          className="text-[10vw] md:text-[7vw] lg:text-[5.5vw] font-bold uppercase leading-[0.9] tracking-tight mb-20"
+        >
+          <span className="text-[var(--text)]">Technical</span>
+          <br />
+          <span className="text-[var(--text-muted)]">Arsenal</span>
+        </motion.h2>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-[var(--border)]">
+          {skillCategories.map((cat) => (
+            <motion.div
+              key={cat.title}
+              variants={itemVariants}
+              className="bg-[var(--card-bg)] p-6 hover:bg-[var(--card-hover)] transition-colors duration-500"
+            >
+              <div className="flex items-center gap-3 mb-5">
+                <div className="w-2 h-2 bg-[var(--accent)] rotate-45" />
+                <h3 className="text-xs uppercase tracking-[0.2em] font-medium text-[var(--text-muted)]">
+                  {cat.title}
+                </h3>
+              </div>
+              <div className="flex flex-wrap gap-2">
+                {cat.skills.map((skill) => (
+                  <span
+                    key={skill}
+                    className="px-3 py-1.5 text-[10px] uppercase tracking-[0.1em] font-medium bg-[var(--bg-elevated)] text-[var(--text-muted)] border border-[var(--border)] hover:border-[var(--accent)]/30 hover:text-[var(--accent)] transition-all duration-300"
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </motion.div>
+          ))}
         </div>
-
-        <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
-          <div className="relative flex items-center justify-center w-64 h-64 lg:w-80 lg:h-80 flex-shrink-0 [perspective:600px] [transform-style:preserve-3d]">
-            <div className="absolute inset-0 rounded-full bg-gradient-to-r from-indigo-500 via-purple-500 via-pink-500 to-cyan-500 opacity-10 blur-xl" />
-            
-            <motion.div
-              className="absolute rounded-full border border-purple-400/30"
-              animate={{ rotate: 360 }}
-              transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
-              style={{ width: 120, height: 120, transformStyle: "preserve-3d" }}
-            >
-              <div className="absolute w-8 h-8 -top-4 left-1/2 -translate-x-1/2 rounded-full bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 shadow-[0_0_15px_rgba(168,85,247,0.6)] flex items-center justify-center [transform:translateZ(20px)]">
-                <Code2 size={14} className="text-white" />
-              </div>
-              <div className="absolute w-8 h-8 -bottom-4 left-1/2 -translate-x-1/2 rounded-full bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 shadow-[0_0_15px_rgba(168,85,247,0.6)] flex items-center justify-center [transform:translateZ(-20px)]">
-                <Brain size={14} className="text-white" />
-              </div>
-            </motion.div>
-
-            <motion.div
-              className="absolute rounded-full border border-pink-400/30"
-              animate={{ rotate: -360 }}
-              transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
-              style={{ width: 190, height: 190, transformStyle: "preserve-3d" }}
-            >
-              <div className="absolute w-7 h-7 -top-3.5 left-1/2 -translate-x-1/2 rounded-full bg-gradient-to-br from-purple-500 via-pink-500 to-cyan-500 shadow-[0_0_15px_rgba(236,72,153,0.6)] flex items-center justify-center [transform:translateZ(30px)]">
-                <Server size={12} className="text-white" />
-              </div>
-              <div className="absolute w-7 h-7 -bottom-3.5 left-1/2 -translate-x-1/2 rounded-full bg-gradient-to-br from-purple-500 via-pink-500 to-cyan-500 shadow-[0_0_15px_rgba(236,72,153,0.6)] flex items-center justify-center [transform:translateZ(-30px)]">
-                <Database size={12} className="text-white" />
-              </div>
-            </motion.div>
-
-            <motion.div
-              className="absolute rounded-full border border-cyan-400/30"
-              animate={{ rotate: 360 }}
-              transition={{ duration: 35, repeat: Infinity, ease: "linear" }}
-              style={{ width: 260, height: 260, transformStyle: "preserve-3d" }}
-            >
-              <div className="absolute w-6 h-6 -top-3 left-1/2 -translate-x-1/2 rounded-full bg-gradient-to-br from-pink-500 to-cyan-500 shadow-[0_0_15px_rgba(6,182,212,0.6)] flex items-center justify-center [transform:translateZ(40px)]">
-                <Terminal size={10} className="text-white" />
-              </div>
-              <div className="absolute w-6 h-6 -bottom-3 left-1/2 -translate-x-1/2 rounded-full bg-gradient-to-br from-pink-500 to-cyan-500 shadow-[0_0_15px_rgba(6,182,212,0.6)] flex items-center justify-center [transform:translateZ(-40px)]">
-                <GitBranch size={10} className="text-white" />
-              </div>
-            </motion.div>
-
-            <motion.div
-              initial={{ scale: 0 }}
-              animate={{ scale: 1 }}
-              transition={{ delay: 0.5, type: "spring" }}
-              className="absolute z-20 w-16 h-16 rounded-full bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 flex items-center justify-center shadow-[0_0_25px_rgba(168,85,247,0.7)] border-2 border-white dark:border-neutral-900"
-            >
-              <span className="text-white font-bold text-[10px]">SKILLS</span>
-            </motion.div>
-          </div>
-
-          <div className="flex-1 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {skillGroups.map((group, idx) => (
-              <motion.div
-                key={group.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: idx * 0.08 }}
-                viewport={{ once: true }}
-                className="group p-4 rounded-xl bg-neutral-50 dark:bg-neutral-900/50 border border-neutral-200 dark:border-neutral-800 hover:border-purple-500/50 dark:hover:border-purple-500/50 transition-all"
-              >
-                <div className="flex items-center gap-3 mb-3">
-                  <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 flex items-center justify-center">
-                    <group.icon size={16} className="text-white" />
-                  </div>
-                  <h3 className="text-sm font-semibold text-neutral-900 dark:text-white">
-                    {group.title}
-                  </h3>
-                </div>
-                <div className="flex flex-wrap gap-1.5">
-                  {group.skills.map((skill) => (
-                    <span
-                      key={skill}
-                      className="px-2 py-0.5 text-xs rounded-md bg-neutral-200 dark:bg-neutral-800 text-neutral-600 dark:text-neutral-400"
-                    >
-                      {skill}
-                    </span>
-                  ))}
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </div>
+      </motion.div>
     </section>
   );
 }
-
-export default Skills;

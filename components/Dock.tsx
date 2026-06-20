@@ -8,74 +8,59 @@ import {
   IconHome,
   IconTerminal2,
   IconLayout,
-  IconBrandFacebook,
+  IconBook,
 } from "@tabler/icons-react";
-
 
 export function Dock() {
   const links = [
     {
       title: "Home",
-      icon: (
-        <IconHome className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-      ),
+      icon: <IconHome className="h-full w-full text-[var(--text-muted)]" />,
       href: "#",
     },
     {
       title: "About",
-      icon: (
-        <IconLayout className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-      ),
+      icon: <IconLayout className="h-full w-full text-[var(--text-muted)]" />,
       href: "#about",
     },
     {
+      title: "Skills",
+      icon: <IconTerminal2 className="h-full w-full text-[var(--text-muted)]" />,
+      href: "#skills",
+    },
+    {
       title: "Projects",
-      icon: (
-        <IconTerminal2 className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-      ),
+      icon: <IconTerminal2 className="h-full w-full text-[var(--text-muted)]" />,
       href: "#projects",
     },
     {
-      title: "Contact Me",
-      icon: (
-        <IconSend className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-      ),
+      title: "Education",
+      icon: <IconBook className="h-full w-full text-[var(--text-muted)]" />,
+      href: "#education",
+    },
+    {
+      title: "Contact",
+      icon: <IconSend className="h-full w-full text-[var(--text-muted)]" />,
       href: "#contact",
     },
     {
       title: "LinkedIn",
-      icon: (
-        <IconBrandLinkedin className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-      ),
+      icon: <IconBrandLinkedin className="h-full w-full text-[var(--text-muted)]" />,
       href: "https://www.linkedin.com/in/musaddiq-rafi/",
       target: "_blank",
       rel: "noopener noreferrer",
     },
     {
       title: "GitHub",
-      icon: (
-        <IconBrandGithub className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-      ),
+      icon: <IconBrandGithub className="h-full w-full text-[var(--text-muted)]" />,
       href: "https://github.com/musaddiq-rafi/",
-      target: "_blank",
-      rel: "noopener noreferrer",
-    },
-    {
-      title: "Facebook",
-      icon: (
-        <IconBrandFacebook className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-      ),
-      href: "https://facebook.com/abdullahalmusaddiq.rafi",
       target: "_blank",
       rel: "noopener noreferrer",
     },
   ];
   return (
-    <div className="flex items-center justify-center ">
-      <FloatingDock
-        mobileClassName="translate-y-20" // only for demo, remove for production
-        items={links}
-      />
+    <div className="flex items-center justify-center">
+      <FloatingDock mobileClassName="translate-y-20" items={links} />
     </div>
   );
 }

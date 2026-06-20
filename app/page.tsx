@@ -1,33 +1,31 @@
-import Footer from '@/components/Footer'
-import Hero from '@/components/Hero'
-import { RecentProjects } from '@/components/RecentProjects'
-import InfoGrid from '@/components/InfoGrid'
-import React from 'react'
-import { Dock } from '@/components/Dock'
-import  ContactMe  from '@/components/ContactMe'
-import { Analytics } from "@vercel/analytics/react"
-import { SpeedInsights } from "@vercel/speed-insights/next"
-import { TimelineDemo } from '@/components/TimelineEducation'
-import { Skills } from '@/components/Skills'
-const page = () => {
+import { Header } from "@/components/Header";
+import { About } from "@/components/About";
+import { Skills } from "@/components/Skills";
+import { Projects } from "@/components/Projects";
+import { Experience } from "@/components/Experience";
+import { Education } from "@/components/Education";
+import { Awards } from "@/components/Awards";
+import { Contact } from "@/components/Contact";
+import { Footer } from "@/components/Footer";
+import { Dock } from "@/components/Dock";
+
+export default function Home() {
   return (
-    <main className="dark bg-black font-extrabold font-sans" >
-    <div className="dark">
-      <Analytics/>
-      <SpeedInsights/>
-
-      {/* <p className='text-4xl text-red-600'> THE WEBSITE IS UNER CONSTRUCTION PLEASE VISIT LATER</p> */}
-      <Dock />
-      <Hero />
-      <InfoGrid />
-      <TimelineDemo/>
+    <main className="bg-[var(--bg)] min-h-screen">
+      <Header />
+      <About />
       <Skills />
-      <RecentProjects />
-      <ContactMe />
+      <Projects />
+      <Experience />
+      <Education />
+      <Awards />
+      <Contact />
       <Footer />
-    </div>
+      <div className="fixed bottom-0 left-0 right-0 flex justify-center pb-6 z-50 pointer-events-none">
+        <div className="pointer-events-auto">
+          <Dock />
+        </div>
+      </div>
     </main>
-  )
+  );
 }
-
-export default page
