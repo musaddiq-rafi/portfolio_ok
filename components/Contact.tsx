@@ -133,7 +133,7 @@ export function Contact() {
           <motion.div variants={itemVariants} className="flex flex-col justify-center">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label className="text-[9px] uppercase tracking-[0.3em] font-medium text-[var(--text-muted)] mb-2 block">
+                <label className="text-[10px] uppercase tracking-[0.3em] font-medium text-[var(--text-muted)] mb-2 block">
                   Name
                 </label>
                 <input
@@ -147,7 +147,7 @@ export function Contact() {
               </div>
 
               <div>
-                <label className="text-[9px] uppercase tracking-[0.3em] font-medium text-[var(--text-muted)] mb-2 block">
+                <label className="text-[10px] uppercase tracking-[0.3em] font-medium text-[var(--text-muted)] mb-2 block">
                   Email
                 </label>
                 <input
@@ -161,7 +161,7 @@ export function Contact() {
               </div>
 
               <div>
-                <label className="text-[9px] uppercase tracking-[0.3em] font-medium text-[var(--text-muted)] mb-2 block">
+                <label className="text-[10px] uppercase tracking-[0.3em] font-medium text-[var(--text-muted)] mb-2 block">
                   Message
                 </label>
                 <textarea

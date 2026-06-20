@@ -47,7 +47,7 @@ export function Footer() {
   return (
     <footer
       ref={ref}
-      className="relative bg-[var(--bg)] border-t border-[var(--border)] h-screen flex flex-col justify-between px-6 md:px-10 lg:px-14 py-6"
+      className="relative bg-[var(--bg)] border-t border-[var(--border)] min-h-screen flex flex-col justify-between px-6 md:px-10 lg:px-14 py-6"
     >
       <motion.div
         variants={containerVariants}
@@ -169,7 +169,7 @@ export function Footer() {
                 </a>
                 <button
                   onClick={copyEmail}
-                  className="text-[8px] uppercase tracking-[0.1em] font-medium text-[var(--text-muted)] border border-[var(--border)] px-2 py-1 hover:text-[var(--accent)] hover:border-[var(--accent)] transition-all duration-300"
+                  className="text-[10px] uppercase tracking-[0.1em] font-medium text-[var(--text-muted)] border border-[var(--border)] px-3 py-1.5 hover:text-[var(--accent)] hover:border-[var(--accent)] transition-all duration-300"
                 >
                   {emailCopied ? "Copied!" : "Copy"}
                 </button>
@@ -186,10 +186,10 @@ export function Footer() {
         animate={isInView ? "visible" : "hidden"}
         className="flex justify-between items-center pt-4 flex-shrink-0"
       >
-        <p className="text-[9px] tracking-[0.08em] font-medium text-[var(--text-muted)] uppercase">
+        <p className="text-[10px] tracking-[0.08em] font-medium text-[var(--text-muted)] uppercase">
           &copy; {new Date().getFullYear()} Abdullah Al Musaddiq Rafi
         </p>
-        <p className="text-[9px] tracking-[0.08em] font-medium text-[var(--text-muted)] uppercase">
+        <p className="text-[10px] tracking-[0.08em] font-medium text-[var(--text-muted)] uppercase">
           Built with Next.js
         </p>
       </motion.div>

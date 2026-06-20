@@ -1,3 +1,4 @@
+import { Navbar } from "@/components/Navbar";
 import { Header } from "@/components/Header";
 import { About } from "@/components/About";
 import { Skills } from "@/components/Skills";
@@ -12,6 +13,7 @@ import { Dock } from "@/components/Dock";
 export default function Home() {
   return (
     <main className="bg-[var(--bg)] min-h-screen">
+      <Navbar />
       <Header />
       <About />
       <Skills />
@@ -21,11 +23,7 @@ export default function Home() {
       <Awards />
       <Contact />
       <Footer />
-      <div className="fixed bottom-0 left-0 right-0 flex justify-center pb-6 z-50 pointer-events-none">
-        <div className="pointer-events-auto">
-          <Dock />
-        </div>
-      </div>
+      <Dock />
     </main>
   );
 }
