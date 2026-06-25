@@ -56,7 +56,7 @@ export function Awards() {
     <section
       ref={ref}
       id="awards"
-      className="relative px-6 md:px-10 lg:px-14 py-32 border-t border-[var(--border)]"
+      className="relative px-6 md:px-10 lg:px-14 py-32 border-t border-[var(--border)] scroll-mt-20"
     >
       <motion.div
         variants={containerVariants}

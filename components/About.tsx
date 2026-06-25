@@ -30,10 +30,10 @@ export function About() {
   });
 
   return (
-    <section ref={containerRef} className="relative h-[300vh]">
+    <section ref={containerRef} id="about" className="relative h-[300vh] scroll-mt-20">
       <div className="sticky top-0 h-screen flex items-center px-6 md:px-10 lg:px-14">
         <div className="w-full max-w-5xl">
-          <div className="flex flex-col gap-3 md:gap-4">
+          <motion.p className="text-[5vw] md:text-[3.5vw] lg:text-[2.8vw] font-semibold leading-[1.3] tracking-tight">
             {lines.map((words, i) => (
               <ScrollLine
                 key={i}
@@ -43,7 +43,7 @@ export function About() {
                 total={lines.length}
               />
             ))}
-          </div>
+          </motion.p>
         </div>
       </div>
     </section>
@@ -74,18 +74,18 @@ function ScrollLine({
   const opacity = useSpring(rawOpacity, { stiffness: 120, damping: 30 });
 
   return (
-    <motion.p
-      className="text-[5vw] md:text-[3.5vw] lg:text-[2.8vw] font-semibold leading-[1.3] tracking-tight"
-      style={{ opacity }}
+    <motion.span
+      style={{ opacity, display: "block" }}
+      className="text-[var(--text)]"
     >
       {words.map((word, wi) => (
         <span
           key={wi}
-          className={word.highlight ? "text-[var(--accent)]" : "text-[var(--text)]"}
+          className={word.highlight ? "text-[var(--accent)]" : ""}
         >
           {word.text}{" "}
         </span>
       ))}
-    </motion.p>
+    </motion.span>
   );
 }

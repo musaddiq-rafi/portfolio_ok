@@ -54,7 +54,7 @@ export function Skills() {
     <section
       ref={ref}
       id="skills"
-      className="relative px-6 md:px-10 lg:px-14 py-32"
+      className="relative px-6 md:px-10 lg:px-14 py-32 scroll-mt-20"
     >
       <motion.div
         variants={containerVariants}

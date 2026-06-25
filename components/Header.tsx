@@ -57,7 +57,6 @@ export function Header() {
             className="object-contain object-top"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[20%] to-[var(--bg)]" />
         </motion.div>
 
         {/* Hero content - mobile */}
