@@ -52,7 +52,7 @@ export function Contact() {
     <section
       ref={ref}
       id="contact"
-      className="relative px-6 md:px-10 lg:px-14 py-32 scroll-mt-20"
+      className="relative px-6 md:px-10 lg:px-14 py-32 scroll-mt-20 diagonal-divider--alt"
     >
       <motion.div
         variants={containerVariants}

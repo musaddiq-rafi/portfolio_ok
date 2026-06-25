@@ -15,7 +15,7 @@ const lines = [
   ],
   [
     { text: "Get rid of", highlight: false },
-    { text: "slops", highlight: true },
+    { text: "mediocrity", highlight: true },
     { text: "and embrace the", highlight: false },
     { text: "exception.", highlight: true },
   ],
@@ -75,7 +75,7 @@ function ScrollLine({
 
   return (
     <motion.span
-      style={{ opacity, display: "block" }}
+      style={{ opacity, display: "inline" }}
       className="text-[var(--text)]"
     >
       {words.map((word, wi) => (

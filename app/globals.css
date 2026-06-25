@@ -89,3 +89,26 @@ body {
 .glow-crimson {
   box-shadow: 0 0 30px rgba(230, 57, 70, 0.12), 0 0 60px rgba(230, 57, 70, 0.04);
 }
+
+/* Diagonal section dividers */
+.diagonal-divider {
+  position: relative;
+}
+.diagonal-divider::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -2%;
+  right: -2%;
+  height: 2px;
+  background: var(--accent);
+  opacity: 0.2;
+  transform-origin: top left;
+  transform: rotate(-2deg);
+  pointer-events: none;
+  z-index: 2;
+}
+.diagonal-divider--alt::before {
+  transform-origin: top right;
+  transform: rotate(2deg);
+}
