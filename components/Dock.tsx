@@ -5,6 +5,7 @@ import {
   Home,
   LayoutGrid,
   Terminal,
+  FolderCode,
   BookOpen,
   Send,
   ExternalLink,
@@ -48,7 +49,7 @@ export function Dock() {
     },
     {
       title: "Projects",
-      icon: <Terminal className="h-full w-full text-[var(--text-muted)]" />,
+      icon: <FolderCode className="h-full w-full text-[var(--text-muted)]" />,
       href: "#projects",
     },
     {
