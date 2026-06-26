@@ -9,7 +9,7 @@ const education = [
     degree: "BSc in Software Engineering",
     period: "2022 – 2027",
     details: [
-      "CGPA: 3.96 / 4.00 — top of class through 5th semester",
+      "CGPA: 3.96 / 4.00",
       "Coursework: Software Engineering, AI/ML, Database Systems, Systems Programming",
     ],
   },
